@@ -1,1 +1,2 @@
+-- testing
 require("vimide")

@@ -48,5 +48,24 @@ require('gitsigns').setup {
   end
 }
 
+-- set up a commit and push special command
+local function commit_and_push()
+-- Prompt for commit message using Vim's built-in input function
+    local commit_message = vim.fn.input('Commit Message: ')
+    -- Check if the commit message is not empty
+    if commit_message ~= "" then
+        -- Run :G commit and :G push with the provided message
+        vim.cmd("G commit -m '" .. commit_message .. "'")
+        vim.cmd("G push")
+    else
+        print("Commit aborted: No commit message provided.")
+    end
+end
+_G.commit_and_push = commit_and_push
+
+-- Map the function to a keybinding, e.g., <leader>gp
+vim.api.nvim_set_keymap('n', '<leader>gp', ':lua commit_and_push()<CR>', { noremap = true, silent = true })
+
+
 -- remap :G to alt-g:
 vim.api.nvim_set_keymap('n', '<leader>gg', ':G<CR>', { noremap = true, silent = true })
