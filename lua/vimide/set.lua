@@ -10,3 +10,8 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+vim.api.nvim_create_autocmd({"BufLeave", "FocusLost"}, {
+    pattern = "*",
+    command = "if &modifiable | silent! w | endif"
+})
+

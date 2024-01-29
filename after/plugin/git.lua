@@ -48,3 +48,5 @@ require('gitsigns').setup {
   end
 }
 
+-- remap :G to alt-g:
+vim.api.nvim_set_keymap('n', '<leader>gg', ':G<CR>', { noremap = true, silent = true })

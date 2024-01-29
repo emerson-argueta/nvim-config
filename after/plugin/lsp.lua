@@ -55,3 +55,7 @@ cmp.setup({
   }),
 })
 
+-- Mapping Ctrl-/ to toggle comments
+vim.api.nvim_set_keymap('n', '<C-_>', ':Commentary<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-_>', ':Commentary<CR>', { noremap = true, silent = true })
+
