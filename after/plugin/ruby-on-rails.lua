@@ -4,7 +4,7 @@ require("dressing").setup({
   },
   select = {
     -- telescope = require('telescope.themes').get_ivy({...})
-    telescope = require('telescope.themes').get_dropdown({ layout_config = { height = 15, width = 90 } }), }
+    telescope = require('telescope.themes').get_dropdown({ layout_config = { height = 30, width = 180 } }), }
 })
 
 -- The default settings
