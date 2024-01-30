@@ -54,7 +54,7 @@ end
 _G.insert_erb_tag = insert_erb_tag
 
 -- Map the function to different keybindings
-vim.api.nvim_set_keymap('i', '<leader><', '<C-o>:lua insert_erb_tag("output")<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<leader>>', '<C-o>:lua insert_erb_tag("execution")<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<leader>,', '<C-o>:lua insert_erb_tag("execution_trim")<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader><', ':lua insert_erb_tag("output")<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>>', ':lua insert_erb_tag("execution")<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>,', ':lua insert_erb_tag("execution_trim")<CR>', { noremap = true, silent = true })
 
