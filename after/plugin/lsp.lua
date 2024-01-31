@@ -60,7 +60,7 @@ cmp.setup({
 -- treesitter setup
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "ruby", "go", "html" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "ruby", "go", "html","embedded_template" },
   highlight = {
     enable = true,
   }
